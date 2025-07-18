@@ -16,26 +16,13 @@ Dalam konteks Perceptron, terdapat beberapa variabel kunci:
     * **Asal Nilai Awal:** Sama seperti bobot, nilai bias ini **dimulai secara acak** (random) pada inisialisasi.
     * **Bagaimana Mereka Diperoleh (Dipelajari):** Selama pelatihan, nilai bias ini juga **diperbarui secara iteratif dan matematis** bersama dengan bobot, dengan tujuan yang sama: mengurangi error prediksi.
 
-* **Jumlah Tertimbang ($z$):** Ini adalah hasil penjumlahan semua perkalian input dengan bobotnya, ditambah bias.
-    $$z = (x_1 \cdot w_1) + (x_2 \cdot w_2) + \ldots + (x_n \cdot w_n) + b$$
+* **Jumlah Tertimbang ($X$):** Ini adalah hasil penjumlahan semua perkalian input dengan bobotnya, ditambah bias.
+    $$X = (x_1 \cdot w_1) + (x_2 \cdot w_2) + \ldots + (x_n \cdot w_n) + b$$
 
-* **Fungsi Aktivasi (f(X)):** Sebuah fungsi non-linear yang diterapkan pada $z$ untuk menghasilkan output akhir. Untuk perceptron klasik, seringkali digunakan fungsi langkah (step function).
+* **Fungsi Aktivasi $f$($X$):** Sebuah fungsi non-linear yang diterapkan pada $z$ untuk menghasilkan output akhir. Untuk perceptron klasik, seringkali digunakan fungsi langkah (step function).
     $$y = f(X)$$
 
 * **Output ($y$):** Ini adalah prediksi yang dihasilkan oleh Perceptron, biasanya berupa nilai biner (0 atau 1) untuk klasifikasi.
 
-### Bagaimana Perceptron Belajar? (Proses Pelatihan)
 
-Perceptron belajar melalui proses iteratif yang dikenal sebagai Perceptron Learning Rule. Proses ini melibatkan:
-
-1.  **Inisialisasi Acak:** Bobot dan bias dimulai dengan nilai acak yang kecil.
-2.  **Iterasi (Epoch):** Seluruh dataset pelatihan diproses berulang kali.
-    * **Perhitungan Forward Pass:** Untuk setiap baris (sampel) data di dataset, inputnya ($x_1, x_2$, dst.) digunakan bersama dengan bobot dan bias saat ini untuk menghitung output ($y$). **Penting: Setiap baris data dihitung satu per satu, bukan ditotal per kolom.**
-    * **Perhitungan Error:** Output yang diprediksi ($y$) dibandingkan dengan target sebenarnya ($t$) dari dataset. Error dihitung sebagai $Error = t - y$.
-    * **Pembaruan Bobot & Bias:** Jika ada error, bobot dan bias disesuaikan sedikit demi sedikit menggunakan rumus:
-        $$w_i^{\text{baru}} = w_i^{\text{lama}} + \alpha \cdot (t - y) \cdot x_i$$
-        $$b^{\text{baru}} = b^{\text{lama}} + \alpha \cdot (t - y)$$
-        Di mana $\alpha$ adalah **Learning Rate** (tingkat pembelajaran), parameter yang menentukan seberapa besar penyesuaian yang dilakukan.
-
-Proses ini berulang sampai model dapat mengklasifikasikan semua data pelatihan dengan benar (konvergen) atau setelah jumlah iterasi maksimum tercapai.
 
