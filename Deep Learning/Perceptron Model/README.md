@@ -1,6 +1,4 @@
-![Perceptron Diagram](Single Perceptron.PNG)
-
-Proyek ini berisi implementasi dasar dari model Perceptron, unit komputasi paling sederhana dalam Jaringan Saraf Tiruan (Artificial Neural Network - ANN). Perceptron dirancang untuk melakukan klasifikasi biner, yaitu memisahkan data ke dalam dua kategori.
+![Perceptron Diagram](SinglePerceptron.PNG)
 
 ## Konsep Perceptron
 
