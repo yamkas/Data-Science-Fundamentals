@@ -1,4 +1,4 @@
-![Perceptron Diagram](SinglePerceptron.PNG)
+![Perceptron Diagram](Perceptron.PNG)
 
 ## Konsep Perceptron
 
