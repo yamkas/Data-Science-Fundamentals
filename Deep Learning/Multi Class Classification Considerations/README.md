@@ -6,6 +6,8 @@ Dalam *deep learning*, klasifikasi adalah tugas fundamental untuk mengkategorika
 
 ## 1. Multiclass Classification (Mutually Exclusive Classes)
 
+![MultiClass Diagram](multiclass.jpg)
+
 Gambar pertama mengilustrasikan arsitektur dasar untuk *multiclass classification*. Dalam skenario ini, setiap input (misalnya, piksel gambar atau deskripsi warna) hanya boleh termasuk ke dalam satu dan hanya satu kelas saja. Contohnya, sebuah piksel gambar tidak bisa sekaligus berwarna "Merah" dan "Biru" pada saat yang bersamaan jika kita mengklasifikasikan warna dasarnya.
 
 ### Arsitektur Jaringan Saraf Tiruan:
@@ -68,4 +70,4 @@ Setiap $p_i$ mewakili probabilitas bahwa input tersebut mengandung warna $i$, te
 
 ---
 
-Memahami perbedaan mendasar ini akan sangat membantu Anda dalam merancang, mengimplementasikan, dan melatih model *deep learning* yang tepat sesuai dengan sifat spesifik dari tugas klasifikasi warna Anda.
+
