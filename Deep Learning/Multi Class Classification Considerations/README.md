@@ -41,8 +41,6 @@ Dalam kasus ini, model akan memprediksi input tersebut memiliki warna `Green` ka
 
 ## 2. Multi-label Classification (Non-Exclusive Classes)
 
-Meskipun gambar yang Anda berikan berfokus pada *mutually exclusive classes* (yang menggunakan Softmax), penting untuk memahami bahwa ada skenario di mana kelas-kelas warna tidak saling eksklusif. Ini disebut *Multi-label Classification*.
-
 Dalam *multi-label classification*, sebuah input tunggal (misalnya, deskripsi campuran warna dalam sebuah objek) dapat termasuk ke dalam beberapa kelas warna secara bersamaan. Contohnya adalah mengklasifikasikan corak atau pola yang memiliki campuran beberapa warna, misalnya `[Merah, Kuning, Ungu]` pada sebuah kain batik.
 
 ### Perbedaan Utama dalam Arsitektur & Fungsi Aktivasi:
