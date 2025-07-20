@@ -27,7 +27,7 @@ $$p_i = \frac{e^{z_i}}{\sum_{j=1}^{N} e^{z_j}}$$
 * $e^{z_i}$ adalah eksponensial dari *logit* untuk kelas warna $i$.
 * $\sum_{j=1}^{N} e^{z_j}$ adalah jumlah eksponensial dari semua *logits* untuk semua $N$ kelas warna.
 
-### Contoh Output Softmax (dari Gambar Kedua):
+### Contoh Output Softmax :
 
 Jika kita memiliki 3 kelas warna: `[Red, Green, Blue]`, dan Softmax menghasilkan output: `[0.1, 0.6, 0.3]`, ini berarti:
 
