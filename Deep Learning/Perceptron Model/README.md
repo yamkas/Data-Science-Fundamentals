@@ -7,7 +7,7 @@ Perceptron bekerja dengan mengambil sejumlah input, mengalikan setiap input deng
 
 Dalam konteks Perceptron, terdapat beberapa variabel kunci:
 
-* **Input ($x_1, x_2, \ldots, x_n$):** Ini adalah fitur atau data masukan yang diberikan kepada model. Dalam proyek ini, Anda mungkin akan melihat contoh dengan dua input, $x_1$ dan $x_2$. **Nilai ini berasal langsung dari dataset Anda.**
+* **Input ($x_1, x_2, \ldots, x_n$):** Ini adalah fitur atau data masukan yang diberikan kepada model. Dalam konetks ini, kita mungkin akan melihat contoh dengan dua input, $x_1$ dan $x_2$. 
 
 * **Bobot (Weights) ($w_1, w_2, \ldots, w_n$):** Setiap input ($x_i$) memiliki bobot ($w_i$) yang sesuai. Bobot ini merepresentasikan **pentingnya atau kekuatan pengaruh** dari input tersebut terhadap keputusan akhir model.
     * **Asal Nilai Awal:** Pada awalnya (saat inisialisasi model), nilai bobot ini **dimulai secara acak** (random).
