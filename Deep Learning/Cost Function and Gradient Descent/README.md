@@ -1,4 +1,4 @@
-# Memahami Konsep Dasar Deep Learning: Jaringan Saraf, Fungsi Biaya, dan Optimasi
+# Konsep Dasar Deep Learning: Jaringan Saraf, Fungsi Biaya, dan Optimasi
 
 Catatan ini akan menjelaskan beberapa konsep fundamental dalam Deep Learning, termasuk arsitektur jaringan saraf, berbagai jenis fungsi biaya (cost functions), dan algoritma optimasi yang digunakan untuk melatih model.
 
@@ -91,7 +91,7 @@ Adam adalah salah satu algoritma optimasi *gradient descent* yang paling populer
 
 ### Keunggulan Adam dibandingkan Algoritma Gradient Descent Lainnya:
 
-![Adam vs Other Optimizers](image-2.png)
+![Adam vs Other Optimizers](AdamvsOtherOptimizers.PNG)
 
 Grafik di atas menunjukkan kinerja Adam (garis ungu) dibandingkan dengan algoritma optimasi lainnya (AdaGrad, RMSProp, SGD Nesterov, AdaDelta) dalam mengurangi *training cost* pada dataset MNIST. Terlihat jelas bahwa Adam mencapai *cost* yang lebih rendah dengan lebih cepat (lebih sedikit iterasi).
 
