@@ -1,6 +1,6 @@
 # Konsep Dasar Deep Learning: Cost Function dan Optimization
 
-Catatan ini akan menjelaskan beberapa konsep fundamental dalam Deep Learning, termasuk arsitektur jaringan saraf, berbagai jenis fungsi biaya (cost functions), dan algoritma optimasi yang digunakan untuk melatih model.
+Catatan ini akan menjelaskan beberapa konsep fundamental dalam Deep Learning, termasuk jenis fungsi biaya (cost functions), dan algoritma optimasi yang digunakan untuk melatih model.
 
 ## 1. Fungsi Biaya (Cost Function)
 
