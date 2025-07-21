@@ -39,7 +39,7 @@ Tujuan kita adalah menemukan nilai $W$ (dan $B$) yang membuat $C$ sekecil mungki
 ### Kompleksitas Fungsi Biaya
 Meskipun fungsi biaya kuadratik terlihat sederhana dalam satu dimensi, dalam praktiknya, fungsi biaya dari jaringan saraf yang kompleks memiliki banyak parameter dan permukaan yang sangat tidak linier.
 
-![Complex Cost Function](image-6.png)
+![Complex Cost Function](ComplexCostFunction.PNG)
 
 Fungsi biaya sebenarnya akan sangat kompleks, dengan banyak lembah lokal (local minima) dan titik pelana (saddle points), bukan hanya satu lembah parabola sederhana. Ini membuat proses menemukan minimum global menjadi tantangan.
 
