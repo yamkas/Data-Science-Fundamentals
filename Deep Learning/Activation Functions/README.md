@@ -1,4 +1,4 @@
-# Memahami Activation Function dalam Deep Learning
+# Activation Function dalam Deep Learning
 
 ## Konsep Activation Function
 
