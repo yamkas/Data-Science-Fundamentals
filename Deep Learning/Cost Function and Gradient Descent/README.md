@@ -27,7 +27,7 @@ Dimana:
 
 Ketika berhadapan dengan **batch** (sekumpulan) data pelatihan, notasi ini diperluas:
 
-![Batch Cost Function](image-3.png)
+![Batch Cost Function](BatchCostFunction.PNG)
 
 $$C = \frac{1}{2n} \sum_x \|y(x) - a^L(x)\|^2$$
 Dimana:
