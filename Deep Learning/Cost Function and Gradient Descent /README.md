@@ -1,30 +1,8 @@
 # Memahami Konsep Dasar Deep Learning: Jaringan Saraf, Fungsi Biaya, dan Optimasi
 
-Proyek ini akan menjelaskan beberapa konsep fundamental dalam Deep Learning, termasuk arsitektur jaringan saraf, berbagai jenis fungsi biaya (cost functions), dan algoritma optimasi yang digunakan untuk melatih model.
+Catatan ini akan menjelaskan beberapa konsep fundamental dalam Deep Learning, termasuk arsitektur jaringan saraf, berbagai jenis fungsi biaya (cost functions), dan algoritma optimasi yang digunakan untuk melatih model.
 
-## 1. Arsitektur Jaringan Saraf (Neural Network) dan Parameter
-
-Sebuah jaringan saraf tiruan (Artificial Neural Network/ANN) terdiri dari lapisan-lapisan neuron yang saling terhubung. Setiap koneksi antar neuron memiliki bobot (weight) dan setiap neuron memiliki bias. Proses ini memungkinkan jaringan untuk mempelajari pola dari data.
-
-### Struktur Jaringan dan Parameter
-Mari kita lihat contoh jaringan saraf kecil dengan semua parameternya diberi label:
-
-![Small Network with Labeled Parameters](image-1.png)
-
-Dalam ilustrasi ini:
-* **$I_1, I_2, I_3$**: Adalah input ke lapisan pertama (Layer 1).
-* **$w_{j,k}^l$**: Merujuk pada **bobot (weight)** yang menghubungkan neuron ke-$k$ di lapisan $l-1$ ke neuron ke-$j$ di lapisan $l$. Misalnya, $w_{1,1}^2$ adalah bobot dari input $I_1$ ke neuron pertama di Layer 2.
-* **$b_j^l$**: Merujuk pada **bias** untuk neuron ke-$j$ di lapisan $l$. Misalnya, $b_1^2$ adalah bias untuk neuron pertama di Layer 2.
-* **$a_j^l$**: Merujuk pada **aktivasi** (output) dari neuron ke-$j$ di lapisan $l$ setelah melalui fungsi aktivasi.
-* **$O_1, O_2$**: Adalah output akhir dari jaringan (Layer 4).
-
-Setiap neuron di lapisan tersembunyi menghitung outputnya (aktivasi) dengan menjumlahkan hasil perkalian input dari lapisan sebelumnya dengan bobotnya masing-masing, ditambah bias, kemudian menerapkan fungsi aktivasi (misalnya, fungsi sigmoid seperti yang digambarkan oleh ikon kurva "S" kecil).
-
-**Ringkasan Parameter:**
-* **W (Weights / Bobot):** Matriks bobot yang menentukan kekuatan koneksi antar neuron.
-* **B (Biases / Bias):** Vektor bias yang ditambahkan ke input yang dibobotkan, memungkinkan neuron untuk mengaktifkan dirinya bahkan ketika semua inputnya nol.
-
-## 2. Fungsi Biaya (Cost Function)
+## 1. Fungsi Biaya (Cost Function)
 
 Fungsi biaya (sering juga disebut fungsi kerugian atau *loss function*) mengukur seberapa baik (atau buruk) kinerja model kita dalam memprediksi output yang benar. Tujuan utama saat melatih jaringan saraf adalah **meminimalkan** nilai fungsi biaya ini.
 
@@ -88,7 +66,7 @@ Dimana:
 
 Tujuan dari Cross-Entropy adalah untuk memaksimalkan kecocokan antara distribusi probabilitas yang diprediksi oleh model dan distribusi probabilitas yang sebenarnya (ground truth). Semakin kecil nilai Cross-Entropy, semakin baik model memprediksi.
 
-## 3. Gradient Descent
+## 2. Gradient Descent
 
 Gradient Descent adalah algoritma optimasi iteratif yang digunakan untuk menemukan nilai minimum dari fungsi biaya. Ini bekerja dengan mengambil langkah-langkah berulang di arah yang berlawanan dari gradien (turunan) fungsi pada titik saat ini. Gradien menunjukkan arah peningkatan terbesar, jadi bergerak berlawanan arah gradien akan membawa kita menuju minimum.
 
@@ -109,7 +87,7 @@ Ukuran langkah (sering disebut *learning rate*) adalah hiperparameter krusial.
     * Jika *learning rate* terlalu kecil, konvergensi akan sangat lambat, membutuhkan banyak iterasi untuk mencapai minimum.
 * **Langkah Besar:** Jika *learning rate* terlalu besar, algoritma mungkin akan "melompat" melewati minimum, atau bahkan menyimpang dan gagal menemukan minimum sama sekali.
 
-## 4. Adam Optimizer (Adaptive Moment Estimation)
+## 3. Adam Optimizer (Adaptive Moment Estimation)
 
 Adam adalah salah satu algoritma optimasi *gradient descent* yang paling populer dan efektif saat ini. Ini adalah metode adaptif yang menghitung *learning rate* adaptif untuk setiap parameter (bobot dan bias) secara individual.
 
