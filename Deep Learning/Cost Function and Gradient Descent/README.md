@@ -49,8 +49,6 @@ Cross-Entropy adalah fungsi biaya yang sering digunakan untuk masalah klasifikas
 
 **Untuk Klasifikasi Biner (2 Kelas):**
 
-![Binary Cross-Entropy](image-7.png)
-
 $$-\left( y \log(p) + (1-y) \log(1-p) \right)$$
 Dimana:
 * $y$: Label sebenarnya (0 atau 1).
