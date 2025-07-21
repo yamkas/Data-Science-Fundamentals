@@ -1,4 +1,4 @@
-  # Memahami Konsep Dasar Deep Learning: Jaringan Saraf, Fungsi Biaya, dan Optimasi
+# Memahami Konsep Dasar Deep Learning: Jaringan Saraf, Fungsi Biaya, dan Optimasi
 
 Proyek ini akan menjelaskan beberapa konsep fundamental dalam Deep Learning, termasuk arsitektur jaringan saraf, berbagai jenis fungsi biaya (cost functions), dan algoritma optimasi yang digunakan untuk melatih model.
 
@@ -31,7 +31,7 @@ Fungsi biaya (sering juga disebut fungsi kerugian atau *loss function*) mengukur
 ### Bentuk Umum Fungsi Biaya
 Secara umum, fungsi biaya `$C$` dapat dilihat sebagai fungsi dari bobot (`$W$`), bias (`$B$`), input pelatihan (`$S^r$`), dan output yang diinginkan (`$E^r$`).
 
-`$C(W, B, S^r, E^r)$`
+![General Cost Function](assets/images/cost_function_general.png)
 
 ### Fungsi Biaya Kuadratik (Quadratic Cost / Mean Squared Error)
 
@@ -40,7 +40,7 @@ Ini adalah salah satu fungsi biaya yang paling umum, terutama untuk masalah regr
 ![Quadratic Cost Function](image-4.png)
 
 Untuk satu sampel pelatihan, fungsi biaya kuadratik sering kali ditulis sebagai:
-`$C = \frac{1}{2} \|y(x) - a^L(x)\|^2$`
+![Quadratic Cost Single Sample](assets/images/quadratic_cost_single.png)
 Dimana:
 * `$C$`: Nilai fungsi biaya.
 * `$y(x)$`: Output yang diinginkan (label benar) untuk input `$x$`.
@@ -51,7 +51,7 @@ Ketika berhadapan dengan **batch** (sekumpulan) data pelatihan, notasi ini diper
 
 ![Batch Cost Function](image-3.png)
 
-`$C = \frac{1}{2n} \sum_x \|y(x) - a^L(x)\|^2$`
+![Quadratic Cost Batch](assets/images/quadratic_cost_batch.png)
 Dimana:
 * `$n$`: Jumlah sampel dalam batch pelatihan.
 * `$\sum_x$`: Penjumlahan di atas semua sampel pelatihan `$x$` dalam batch.
@@ -73,14 +73,14 @@ Cross-Entropy adalah fungsi biaya yang sering digunakan untuk masalah klasifikas
 
 ![Binary Cross-Entropy](image-7.png)
 
-`$-\left( y \log(p) + (1-y) \log(1-p) \right)$`
+![Binary Cross-Entropy Formula](assets/images/binary_cross_entropy.png)
 Dimana:
 * `$y$`: Label sebenarnya (0 atau 1).
 * `$p$`: Probabilitas yang diprediksi oleh model bahwa sampel tersebut termasuk dalam kelas 1.
 
 **Untuk M Jumlah Kelas (> 2 / Multiclass Classification):**
 
-`$-\sum_{c=1}^{M} y_{o,c} \log(p_{o,c})$`
+![Multiclass Cross-Entropy Formula](assets/images/multiclass_cross_entropy.png)
 Dimana:
 * `$M$`: Jumlah total kelas.
 * `$y_{o,c}$`: Variabel biner (0 atau 1) yang menunjukkan apakah observasi `$o$` termasuk dalam kelas `$c$`.
@@ -98,8 +98,8 @@ Gradient Descent adalah algoritma optimasi iteratif yang digunakan untuk menemuk
 1.  **Inisialisasi:** Mulai dengan nilai bobot (`$W$`) dan bias (`$B$`) secara acak.
 2.  **Hitung Gradien:** Hitung gradien (turunan parsial) dari fungsi biaya `$C$` terhadap setiap bobot dan bias. Gradien ini menunjukkan kemiringan permukaan biaya di titik saat ini.
 3.  **Perbarui Parameter:** Sesuaikan bobot dan bias dengan bergerak berlawanan arah gradien. Langkah pembaruan diatur oleh *learning rate* (`$\alpha$`).
-    * Untuk Bobot: `$W_{baru} = W_{lama} - \alpha \frac{\partial C}{\partial W_{lama}}$`
-    * Untuk Bias: `$B_{baru} = B_{lama} - \alpha \frac{\partial C}{\partial B_{lama}}$`
+    * Untuk Bobot: ![Gradient Descent Weights Update](assets/images/gradient_descent_weights.png)
+    * Untuk Bias: ![Gradient Descent Bias Update](assets/images/gradient_descent_bias.png)
 4.  **Ulangi:** Ulangi langkah 2 dan 3 sampai fungsi biaya mencapai nilai minimum atau kriteria penghentian terpenuhi (misalnya, jumlah iterasi maksimum atau perubahan biaya sangat kecil).
 
 ### Ukuran Langkah (Learning Rate)
