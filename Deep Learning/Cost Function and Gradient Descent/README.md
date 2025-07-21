@@ -15,7 +15,7 @@ $$C(W, B, S^r, E^r)$$
 
 Ini adalah salah satu fungsi biaya yang paling umum, terutama untuk masalah regresi.
 
-![Quadratic Cost Function](Quadratic.png)
+![Quadratic Cost Function](Quadratic.PNG)
 
 Untuk satu sampel pelatihan, fungsi biaya kuadratik sering kali ditulis sebagai:
 $$C = \frac{1}{2} \|y(x) - a^L(x)\|^2$$
