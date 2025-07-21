@@ -12,11 +12,11 @@ Mari kita lihat contoh jaringan saraf kecil dengan semua parameternya diberi lab
 ![Small Network with Labeled Parameters](image-1.png)
 
 Dalam ilustrasi ini:
-* `$I_1, I_2, I_3$`: Adalah input ke lapisan pertama (Layer 1).
-* `$w_{j,k}^l$`: Merujuk pada **bobot (weight)** yang menghubungkan neuron ke-$k$ di lapisan `$l-1$` ke neuron ke-$j$ di lapisan `$l$`. Misalnya, `$w_{1,1}^2$` adalah bobot dari input `$I_1$` ke neuron pertama di Layer 2.
-* `$b_j^l$`: Merujuk pada **bias** untuk neuron ke-$j$ di lapisan `$l$`. Misalnya, `$b_1^2$` adalah bias untuk neuron pertama di Layer 2.
-* `$a_j^l$`: Merujuk pada **aktivasi** (output) dari neuron ke-$j$ di lapisan `$l$` setelah melalui fungsi aktivasi.
-* `$O_1, O_2$`: Adalah output akhir dari jaringan (Layer 4).
+* **$I_1, I_2, I_3$**: Adalah input ke lapisan pertama (Layer 1).
+* **$w_{j,k}^l$**: Merujuk pada **bobot (weight)** yang menghubungkan neuron ke-$k$ di lapisan $l-1$ ke neuron ke-$j$ di lapisan $l$. Misalnya, $w_{1,1}^2$ adalah bobot dari input $I_1$ ke neuron pertama di Layer 2.
+* **$b_j^l$**: Merujuk pada **bias** untuk neuron ke-$j$ di lapisan $l$. Misalnya, $b_1^2$ adalah bias untuk neuron pertama di Layer 2.
+* **$a_j^l$**: Merujuk pada **aktivasi** (output) dari neuron ke-$j$ di lapisan $l$ setelah melalui fungsi aktivasi.
+* **$O_1, O_2$**: Adalah output akhir dari jaringan (Layer 4).
 
 Setiap neuron di lapisan tersembunyi menghitung outputnya (aktivasi) dengan menjumlahkan hasil perkalian input dari lapisan sebelumnya dengan bobotnya masing-masing, ditambah bias, kemudian menerapkan fungsi aktivasi (misalnya, fungsi sigmoid seperti yang digambarkan oleh ikon kurva "S" kecil).
 
@@ -29,9 +29,9 @@ Setiap neuron di lapisan tersembunyi menghitung outputnya (aktivasi) dengan menj
 Fungsi biaya (sering juga disebut fungsi kerugian atau *loss function*) mengukur seberapa baik (atau buruk) kinerja model kita dalam memprediksi output yang benar. Tujuan utama saat melatih jaringan saraf adalah **meminimalkan** nilai fungsi biaya ini.
 
 ### Bentuk Umum Fungsi Biaya
-Secara umum, fungsi biaya `$C$` dapat dilihat sebagai fungsi dari bobot (`$W$`), bias (`$B$`), input pelatihan (`$S^r$`), dan output yang diinginkan (`$E^r$`).
+Secara umum, fungsi biaya $C$ dapat dilihat sebagai fungsi dari bobot ($W$), bias ($B$), input pelatihan ($S^r$), dan output yang diinginkan ($E^r$).
 
-![General Cost Function](assets/images/cost_function_general.png)
+$$C(W, B, S^r, E^r)$$
 
 ### Fungsi Biaya Kuadratik (Quadratic Cost / Mean Squared Error)
 
@@ -40,23 +40,23 @@ Ini adalah salah satu fungsi biaya yang paling umum, terutama untuk masalah regr
 ![Quadratic Cost Function](image-4.png)
 
 Untuk satu sampel pelatihan, fungsi biaya kuadratik sering kali ditulis sebagai:
-![Quadratic Cost Single Sample](assets/images/quadratic_cost_single.png)
+$$C = \frac{1}{2} \|y(x) - a^L(x)\|^2$$
 Dimana:
-* `$C$`: Nilai fungsi biaya.
-* `$y(x)$`: Output yang diinginkan (label benar) untuk input `$x$`.
-* `$a^L(x)$`: Output aktual dari jaringan saraf (aktivasi dari lapisan terakhir `$L$`) untuk input `$x$`.
-* `$\| \cdot \|^2$`: Menunjukkan kuadrat dari norma (biasanya norma Euclidean), yang berarti jumlah kuadrat perbedaan antara output yang diinginkan dan output aktual. Faktor `$1/2$` sering ditambahkan untuk menyederhanakan perhitungan turunan.
+* $C$: Nilai fungsi biaya.
+* $y(x)$: Output yang diinginkan (label benar) untuk input $x$.
+* $a^L(x)$: Output aktual dari jaringan saraf (aktivasi dari lapisan terakhir $L$) untuk input $x$.
+* $\| \cdot \|^2$: Menunjukkan kuadrat dari norma (biasanya norma Euclidean), yang berarti jumlah kuadrat perbedaan antara output yang diinginkan dan output aktual. Faktor $1/2$ sering ditambahkan untuk menyederhanakan perhitungan turunan.
 
 Ketika berhadapan dengan **batch** (sekumpulan) data pelatihan, notasi ini diperluas:
 
 ![Batch Cost Function](image-3.png)
 
-![Quadratic Cost Batch](assets/images/quadratic_cost_batch.png)
+$$C = \frac{1}{2n} \sum_x \|y(x) - a^L(x)\|^2$$
 Dimana:
-* `$n$`: Jumlah sampel dalam batch pelatihan.
-* `$\sum_x$`: Penjumlahan di atas semua sampel pelatihan `$x$` dalam batch.
+* $n$: Jumlah sampel dalam batch pelatihan.
+* $\sum_x$: Penjumlahan di atas semua sampel pelatihan $x$ dalam batch.
 
-Tujuan kita adalah menemukan nilai `$W$` (dan `$B$`) yang membuat `$C$` sekecil mungkin.
+Tujuan kita adalah menemukan nilai $W$ (dan $B$) yang membuat $C$ sekecil mungkin.
 
 ### Kompleksitas Fungsi Biaya
 Meskipun fungsi biaya kuadratik terlihat sederhana dalam satu dimensi, dalam praktiknya, fungsi biaya dari jaringan saraf yang kompleks memiliki banyak parameter dan permukaan yang sangat tidak linier.
@@ -73,18 +73,18 @@ Cross-Entropy adalah fungsi biaya yang sering digunakan untuk masalah klasifikas
 
 ![Binary Cross-Entropy](image-7.png)
 
-![Binary Cross-Entropy Formula](assets/images/binary_cross_entropy.png)
+$$-\left( y \log(p) + (1-y) \log(1-p) \right)$$
 Dimana:
-* `$y$`: Label sebenarnya (0 atau 1).
-* `$p$`: Probabilitas yang diprediksi oleh model bahwa sampel tersebut termasuk dalam kelas 1.
+* $y$: Label sebenarnya (0 atau 1).
+* $p$: Probabilitas yang diprediksi oleh model bahwa sampel tersebut termasuk dalam kelas 1.
 
 **Untuk M Jumlah Kelas (> 2 / Multiclass Classification):**
 
-![Multiclass Cross-Entropy Formula](assets/images/multiclass_cross_entropy.png)
+$$-\sum_{c=1}^{M} y_{o,c} \log(p_{o,c})$$
 Dimana:
-* `$M$`: Jumlah total kelas.
-* `$y_{o,c}$`: Variabel biner (0 atau 1) yang menunjukkan apakah observasi `$o$` termasuk dalam kelas `$c$`.
-* `$p_{o,c}$`: Probabilitas yang diprediksi oleh model bahwa observasi `$o$` termasuk dalam kelas `$c$`.
+* $M$: Jumlah total kelas.
+* $y_{o,c}$: Variabel biner (0 atau 1) yang menunjukkan apakah observasi $o$ termasuk dalam kelas $c$.
+* $p_{o,c}$: Probabilitas yang diprediksi oleh model bahwa observasi $o$ termasuk dalam kelas $c$.
 
 Tujuan dari Cross-Entropy adalah untuk memaksimalkan kecocokan antara distribusi probabilitas yang diprediksi oleh model dan distribusi probabilitas yang sebenarnya (ground truth). Semakin kecil nilai Cross-Entropy, semakin baik model memprediksi.
 
@@ -95,11 +95,11 @@ Gradient Descent adalah algoritma optimasi iteratif yang digunakan untuk menemuk
 ![Gradient Descent Steps](image-8.png)
 
 ### Cara Kerja Gradient Descent:
-1.  **Inisialisasi:** Mulai dengan nilai bobot (`$W$`) dan bias (`$B$`) secara acak.
-2.  **Hitung Gradien:** Hitung gradien (turunan parsial) dari fungsi biaya `$C$` terhadap setiap bobot dan bias. Gradien ini menunjukkan kemiringan permukaan biaya di titik saat ini.
-3.  **Perbarui Parameter:** Sesuaikan bobot dan bias dengan bergerak berlawanan arah gradien. Langkah pembaruan diatur oleh *learning rate* (`$\alpha$`).
-    * Untuk Bobot: ![Gradient Descent Weights Update](assets/images/gradient_descent_weights.png)
-    * Untuk Bias: ![Gradient Descent Bias Update](assets/images/gradient_descent_bias.png)
+1.  **Inisialisasi:** Mulai dengan nilai bobot ($W$) dan bias ($B$) secara acak.
+2.  **Hitung Gradien:** Hitung gradien (turunan parsial) dari fungsi biaya $C$ terhadap setiap bobot dan bias. Gradien ini menunjukkan kemiringan permukaan biaya di titik saat ini.
+3.  **Perbarui Parameter:** Sesuaikan bobot dan bias dengan bergerak berlawanan arah gradien. Langkah pembaruan diatur oleh *learning rate* ($\alpha$).
+    * Untuk Bobot: $$W_{baru} = W_{lama} - \alpha \frac{\partial C}{\partial W_{lama}}$$
+    * Untuk Bias: $$B_{baru} = B_{lama} - \alpha \frac{\partial C}{\partial B_{lama}}$$
 4.  **Ulangi:** Ulangi langkah 2 dan 3 sampai fungsi biaya mencapai nilai minimum atau kriteria penghentian terpenuhi (misalnya, jumlah iterasi maksimum atau perubahan biaya sangat kecil).
 
 ### Ukuran Langkah (Learning Rate)
