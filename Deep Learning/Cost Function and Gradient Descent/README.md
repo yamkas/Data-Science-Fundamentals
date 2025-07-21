@@ -68,7 +68,7 @@ Tujuan dari Cross-Entropy adalah untuk memaksimalkan kecocokan antara distribusi
 
 Gradient Descent adalah algoritma optimasi iteratif yang digunakan untuk menemukan nilai minimum dari fungsi biaya. Ini bekerja dengan mengambil langkah-langkah berulang di arah yang berlawanan dari gradien (turunan) fungsi pada titik saat ini. Gradien menunjukkan arah peningkatan terbesar, jadi bergerak berlawanan arah gradien akan membawa kita menuju minimum.
 
-![Gradient Descent Steps](image-8.png)
+![Gradient Descent Steps](GradientDescentSteps.PNG)
 
 ### Cara Kerja Gradient Descent:
 1.  **Inisialisasi:** Mulai dengan nilai bobot ($W$) dan bias ($B$) secara acak.
