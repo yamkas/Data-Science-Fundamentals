@@ -7,7 +7,7 @@ Sebuah jaringan saraf tiruan (Artificial Neural Network/ANN) terdiri dari lapisa
 ### Struktur Jaringan dan Parameter
 Mari kita lihat contoh jaringan saraf kecil dengan semua parameternya diberi label:
 
-![Small Network with Labeled Parameters](image-1.png)
+![Small Network with Labeled Parameters](NeuralNetwork.PNG)
 
 Dalam ilustrasi ini:
 * **$I_1, I_2, I_3$**: Adalah input ke lapisan pertama (Layer 1).
