@@ -10,7 +10,7 @@ Tujuan utama backpropagation adalah untuk mengetahui bagaimana perubahan bobot j
 
 Pertimbangkan jaringan yang sangat sederhana di mana setiap lapisan hanya memiliki satu neuron. Setiap input dalam jaringan ini menerima bobot dan bias. Fungsi biaya untuk jaringan seperti itu dengan bobot $w1, w2, w3$ dan bias $b1, b2, b3$ dapat direpresentasikan sebagai $C(w1, b1, w2, b2, w3, b3)$.
 
-## 3. Perambatan Maju (Tinjauan)
+## 3. Forward Propagation
 
 Sebelum membahas backpropagation, penting untuk memahami proses perambatan maju. Dalam jaringan saraf dengan $L$ lapisan, notasi untuk lapisan dapat berupa $L-n, L-2, L-1, L$.
 
