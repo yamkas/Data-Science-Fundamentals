@@ -10,12 +10,8 @@ Dalam konteks Perceptron, terdapat beberapa variabel kunci:
 * **Input ($x_1, x_2, \ldots, x_n$):** Ini adalah fitur atau data masukan yang diberikan kepada model. Dalam konetks ini, kita mungkin akan melihat contoh dengan dua input, $x_1$ dan $x_2$. 
 
 * **Bobot (Weights) ($w_1, w_2, \ldots, w_n$):** Setiap input ($x_i$) memiliki bobot ($w_i$) yang sesuai. Bobot ini merepresentasikan **pentingnya atau kekuatan pengaruh** dari input tersebut terhadap keputusan akhir model.
-    * **Asal Nilai Awal:** Pada awalnya (saat inisialisasi model), nilai bobot ini **dimulai secara acak** (random).
-    * **Bagaimana Mereka Diperoleh (Dipelajari):** Selama proses pelatihan, nilai bobot ini **diperbarui secara iteratif dan matematis** berdasarkan seberapa besar kesalahan yang dibuat model dalam prediksinya. Proses penyesuaian ini bertujuan untuk mengurangi error.
 
 * **Bias ($b$):** Bias adalah nilai konstan yang ditambahkan ke jumlah tertimbang dari input. Ini berfungsi sebagai **ambang batas (threshold) internal** yang memungkinkan model untuk menggeser garis pemisah keputusannya.
-    * **Asal Nilai Awal:** Sama seperti bobot, nilai bias ini **dimulai secara acak** (random) pada inisialisasi.
-    * **Bagaimana Mereka Diperoleh (Dipelajari):** Selama pelatihan, nilai bias ini juga **diperbarui secara iteratif dan matematis** bersama dengan bobot, dengan tujuan yang sama: mengurangi error prediksi.
 
 * **Jumlah Tertimbang ($X$):** Ini adalah hasil penjumlahan semua perkalian input dengan bobotnya, ditambah bias.
     $$X = (x_1 \cdot w_1) + (x_2 \cdot w_2) + \ldots + (x_n \cdot w_n) + b$$
