@@ -10,7 +10,7 @@ Tujuan utama backpropagation adalah untuk mengetahui bagaimana perubahan bobot j
 
 Pertimbangkan jaringan yang sangat sederhana di mana setiap lapisan hanya memiliki satu neuron. Setiap input dalam jaringan ini menerima bobot dan bias. Fungsi biaya untuk jaringan seperti itu dengan bobot $w1, w2, w3$ dan bias $b1, b2, b3$ dapat direpresentasikan sebagai $C(w1, b1, w2, b2, w3, b3)$.
 
-## 3. Forward Propagation
+## 3. Perambatan Maju (Tinjauan)
 
 Sebelum membahas backpropagation, penting untuk memahami proses perambatan maju. Dalam jaringan saraf dengan $L$ lapisan, notasi untuk lapisan dapat berupa $L-n, L-2, L-1, L$.
 
@@ -93,3 +93,27 @@ $$\frac{\partial C}{\partial w_{jk}^l} = a_k^{l-1} \delta_j^l$$
 $$\frac{\partial C}{\partial b_j^l} = \delta_j^l$$
 
 Gradien ini memungkinkan penyesuaian bobot dan bias untuk membantu meminimalkan fungsi biaya.
+
+## Keterangan Simbol dalam Rumus
+
+Berikut adalah penjelasan simbol-simbol yang digunakan dalam rumus-rumus di atas:
+
+* $L$: Menunjukkan nomor lapisan dalam jaringan saraf (misalnya, lapisan output).
+* $l$: Menunjukkan indeks lapisan umum dalam jaringan saraf.
+* $n$: Menunjukkan indeks lapisan umum yang lebih awal.
+* $w^L$: Matriks bobot untuk lapisan $L$.
+* $b^L$: Vektor bias untuk lapisan $L$.
+* $a^L$: Vektor aktivasi (output) dari lapisan $L$.
+* $z^L$: Vektor input berbobot (sebelum fungsi aktivasi) dari lapisan $L$.
+* $\sigma$: Fungsi aktivasi (misalnya, fungsi sigmoid atau ReLU).
+* $\sigma'$: Turunan dari fungsi aktivasi.
+* $C$: Fungsi biaya (cost function) yang ingin diminimalkan oleh jaringan.
+* $C_0$: Fungsi biaya untuk output pada lapisan terakhir.
+* $y$: Vektor target atau label yang benar.
+* $\delta^L$: Vektor kesalahan untuk lapisan output $L$.
+* $\delta^l$: Vektor kesalahan untuk lapisan $l$.
+* $\nabla_a C$: Gradien fungsi biaya $C$ terhadap aktivasi $a$.
+* $\odot$: Produk Hadamard (elemen-demi-elemen).
+* $(w^{l+1})^T$: Transpose dari matriks bobot dari lapisan $l+1$.
+* $\frac{\partial C}{\partial w_{jk}^l}$: Turunan parsial dari fungsi biaya $C$ terhadap bobot $w$ yang menghubungkan neuron $k$ di lapisan $l-1$ dengan neuron $j$ di lapisan $l$.
+* $\frac{\partial C}{\partial b_j^l}$: Turunan parsial dari fungsi biaya $C$ terhadap bias $b$ dari neuron $j$ di lapisan $l$.
