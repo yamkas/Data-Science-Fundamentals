@@ -1,6 +1,6 @@
 # Konsep Backpropagation
 
-Backpropagation adalah algoritma fundamental dalam pembelajaran mendalam (deep learning) yang digunakan untuk melatih jaringan saraf dengan menyesuaikan bobot dan bias untuk meminimalkan fungsi biaya. Ini melibatkan perambatan gradien kesalahan mundur melalui jaringan.
+Backpropagation adalah algoritma fundamental dalam deep learning yang digunakan untuk melatih jaringan saraf dengan menyesuaikan bobot dan bias untuk meminimalkan fungsi biaya. Ini melibatkan perambatan gradien kesalahan mundur melalui jaringan.
 
 ## 1. Tujuan Backpropagation
 
