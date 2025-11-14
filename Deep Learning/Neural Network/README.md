@@ -32,9 +32,9 @@ Kurang lebih *alur kerja* ANN (Artificial Neural Network) memang seperti itu, ta
 
 * Input dimasukkan ke jaringan.
 * Tiap neuron melakukan operasi:
-  [
-  z = w \cdot x + b
-  ]
+$$
+z = w \cdot x + b
+$$
 * Lalu diaktifkan dengan activation function (ReLU, sigmoid, dsb).
 * Hasil akhir keluar sebagai nilai prediksi (*output model*).
 
@@ -62,9 +62,9 @@ Kurang lebih *alur kerja* ANN (Artificial Neural Network) memang seperti itu, ta
 ### **4. Optimization / Update Parameters**
 
 * Optimizer (SGD, Adam, RMSProp, dll) memperbarui bobot menggunakan gradien:
-  [
-  w = w - \eta \cdot \frac{\partial L}{\partial w}
-  ]
+$$
+w = w - \eta \cdot \frac{\partial L}{\partial w}
+$$
 * Tujuannya: mengurangi error setiap iterasi.
 
 ---
